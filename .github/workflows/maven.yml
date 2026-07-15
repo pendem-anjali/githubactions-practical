@@ -50,13 +50,3 @@ jobs:
           echo "Deploying $WAR_FILE to Tomcat..."
           curl -v --upload-file "$WAR_FILE" \
             "http://${{ secrets.TOMCAT_USER }}:${{ secrets.TOMCAT_PASSWORD }}@${{ secrets.TOMCAT_HOST }}/manager/text/deploy?path=/myapp&update=true"
-
-
-
-
-
-
-
-War is stored in runner 
-
-find . -name *.war
